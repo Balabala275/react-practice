@@ -1,3 +1,9 @@
 .title{
   color: blue;
+  width: 100%;
+  background: powderblue;
+  font-size: large;
+  text-align: center;
+  padding: 4px;
 }
+.todo-list{}

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Example2 from './component/Example2';
-import { li } from 'framer-motion/client';
+// import Example2 from './component/Example2';
+
 
 function App() {
   const [item,setitem]=useState([
@@ -31,21 +31,24 @@ const handlecheck=(id)=>{
 
   return (
     <>
-    <ul>
+    <div className='title'>
+    <h1>To do list application</h1>
+    </div>
+    <ul className='todo-list'>
        {item.map((item)=>(
-        <li>
-          <input key={item.id}
+        <li className='todo-item' key={item.id}>
+          <input 
           type='checkbox'
-          onChange={()=>handlecheck(id)}
+          onChange={()=>handlecheck(item.id)}
           checked={item.checked}
           />
-          <label >{itemm.item}</label>
-          <button>delect</button>
+          <label >{item.item}</label>
+          <button className='btn'>delect</button>
         </li>
        ))}
     </ul>
 
-      <Example2 />
+    <footer>$ 2026 | developed by Bala</footer>
     </>
   )
 }
